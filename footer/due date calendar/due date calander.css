@@ -1,0 +1,223 @@
+
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+input[type=number] {
+-moz-appearance: textfield;
+}
+.custom-checkbox {
+display: flex;
+align-items: center;
+cursor: pointer;
+}
+.custom-checkbox input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+.checkmark {
+height: 20px;
+width: 20px;
+background-color: #fff;
+border: 2px solid #e2e8f0;
+border-radius: 4px;
+position: relative;
+}
+.custom-checkbox input:checked ~ .checkmark {
+background-color: #3b82f6;
+border-color: #3b82f6;
+}
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+display: block;
+}
+.custom-checkbox .checkmark:after {
+left: 6px;
+top: 2px;
+width: 6px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.switch {
+position: relative;
+display: inline-block;
+width: 48px;
+height: 24px;
+}
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #e2e8f0;
+transition: .4s;
+border-radius: 24px;
+}
+.slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .slider {
+background-color: #3b82f6;
+}
+input:checked + .slider:before {
+transform: translateX(24px);
+}
+.calendar-day {
+min-height: 120px;
+transition: all 0.2s ease;
+}
+.calendar-day:hover {
+background-color: #f1f5f9;
+}
+.calendar-day.has-event {
+position: relative;
+}
+.calendar-day.has-event::after {
+content: "";
+position: absolute;
+bottom: 8px;
+left: 50%;
+transform: translateX(-50%);
+width: 6px;
+height: 6px;
+border-radius: 50%;
+background-color: #3b82f6;
+}
+.calendar-day.active {
+background-color: #eff6ff;
+border-color: #3b82f6;
+}
+.event-dot {
+width: 8px;
+height: 8px;
+border-radius: 50%;
+display: inline-block;
+margin-right: 4px;
+}
+.event-dot.income-tax {
+background-color: #3b82f6;
+}
+.event-dot.gst {
+background-color: #f59e0b;
+}
+.event-dot.tds {
+background-color: #10b981;
+}
+.event-dot.other {
+background-color: #8b5cf6;
+}
+.filter-checkbox input:checked + .filter-label {
+background-color: #3b82f6;
+color: white;
+border-color: #3b82f6;
+}
+.view-button.active {
+background-color: #3b82f6;
+color: white;
+}
+.date-selector {
+position: relative;
+}
+.date-selector .calendar-popup {
+position: absolute;
+top: 100%;
+left: 0;
+z-index: 10;
+width: 300px;
+display: none;
+}
+.date-selector.open .calendar-popup {
+display: block;
+}
+.reminder-toggle {
+position: relative;
+display: inline-block;
+width: 48px;
+height: 24px;
+}
+.reminder-toggle input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.reminder-slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #e2e8f0;
+transition: .4s;
+border-radius: 24px;
+}
+.reminder-slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .reminder-slider {
+background-color: #3b82f6;
+}
+input:checked + .reminder-slider:before {
+transform: translateX(24px);
+}
+.event-details {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.3s ease-out;
+}
+.event-details.open {
+max-height: 500px;
+}
+.tab-button.active {
+color: #3b82f6;
+border-bottom-color: #3b82f6;
+}
+.deadline-item:hover {
+background-color: #f8fafc;
+}
+.deadline-item.expanded {
+background-color: #f1f5ff;
+}
+.deadline-details {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.3s ease;
+}
+.deadline-details.open {
+max-height: 500px;
+}

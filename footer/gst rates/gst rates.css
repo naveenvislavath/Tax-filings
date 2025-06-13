@@ -1,0 +1,63 @@
+  
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        .tax-slab-0 {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .tax-slab-5 {
+            background-color: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .tax-slab-12 {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .tax-slab-18 {
+            background-color: #fff8e1;
+            color: #f57f17;
+        }
+
+        .tax-slab-28 {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #c5c5c5;
+            border-radius: 10px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+    

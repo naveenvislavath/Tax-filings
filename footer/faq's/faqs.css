@@ -1,0 +1,35 @@
+
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+input[type=number] {
+-moz-appearance: textfield;
+}
+.faq-item.active .faq-answer {
+max-height: 1000px;
+opacity: 1;
+padding-top: 1rem;
+padding-bottom: 1rem;
+}
+.faq-item.active .faq-icon {
+transform: rotate(180deg);
+}
+.faq-answer {
+max-height: 0;
+opacity: 0;
+overflow: hidden;
+transition: all 0.3s ease-in-out;
+}
+.faq-icon {
+transition: transform 0.3s ease;
+}
+.category-tab.active {
+color: #3b82f6;
+border-color: #3b82f6;
+}

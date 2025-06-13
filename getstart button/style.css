@@ -1,0 +1,119 @@
+
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+background-color: #f9fafb;
+}
+.progress-bar {
+height: 8px;
+transition: width 0.3s ease;
+}
+input:not([type="checkbox"]):not([type="radio"]), select {
+transition: border-color 0.2s ease;
+}
+input:not([type="checkbox"]):not([type="radio"]):focus, select:focus {
+border-color: #3b82f6;
+box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.custom-radio {
+position: relative;
+padding-left: 28px;
+cursor: pointer;
+user-select: none;
+}
+.custom-radio input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 20px;
+width: 20px;
+background-color: #fff;
+border: 2px solid #d1d5db;
+border-radius: 50%;
+}
+.custom-radio:hover input ~ .checkmark {
+border-color: #3b82f6;
+}
+.custom-radio input:checked ~ .checkmark {
+border-color: #3b82f6;
+}
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+top: 3px;
+left: 3px;
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background: #3b82f6;
+}
+.custom-radio input:checked ~ .checkmark:after {
+display: block;
+}
+.custom-checkbox {
+position: relative;
+padding-left: 28px;
+cursor: pointer;
+user-select: none;
+}
+.custom-checkbox input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+.checkbox-mark {
+position: absolute;
+top: 0;
+left: 0;
+height: 20px;
+width: 20px;
+background-color: #fff;
+border: 2px solid #d1d5db;
+border-radius: 4px;
+}
+.custom-checkbox:hover input ~ .checkbox-mark {
+border-color: #3b82f6;
+}
+.custom-checkbox input:checked ~ .checkbox-mark {
+background-color: #3b82f6;
+border-color: #3b82f6;
+}
+.checkbox-mark:after {
+content: "";
+position: absolute;
+display: none;
+left: 6px;
+top: 2px;
+width: 5px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.custom-checkbox input:checked ~ .checkbox-mark:after {
+display: block;
+}
+.loader {
+display: none;
+border: 3px solid rgba(255, 255, 255, 0.3);
+border-radius: 50%;
+border-top: 3px solid white;
+width: 20px;
+height: 20px;
+animation: spin 1s linear infinite;
+}
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}

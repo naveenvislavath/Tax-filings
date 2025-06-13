@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Share your details so we can follow up effectively. Required fields are marked with an asterisk for easy guidance.">
+    <title>Client Information Form</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#3b82f6', secondary: '#64748b' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+
+</head>
+
+<body>
+    <div class="min-h-screen flex flex-col">
+        <header class="bg-white shadow-sm">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="./../index.html" class="mr-8"><img src="./../assets/home img/150x80 .png"
+                            alt="Growthlink Tax Filings" class="h-20 w-auto"></a>
+                </div>
+                <div class="flex items-center">
+                    <div class="hidden md:flex items-center">
+                        <div class="w-8 h-8 flex items-center justify-center text-primary">
+                            <i class="ri-phone-line ri-lg"></i>
+                        </div>
+                        <span class="text-sm text-gray-700">+91 99 3609 3609</span>
+                    </div>
+                    <div class="hidden md:flex items-center">
+                        <div class="w-8 h-8 flex items-center justify-center text-primary">
+                            <i class="ri-mail-line ri-lg"></i>
+                        </div>
+                        <span class="text-sm text-gray-700">connect@growthlink.in</span>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!---Addcontent-in-form-->
+
+        <div class="container mx-auto px-8 py-16 md:py-4 relative z-10 font-bold text-lg">
+        
+            <p  class="text-xl text-gray-800 mb-8"> <br> Start Your Tax Filing with Confidence
+            Ready to file your taxes? You're in the right place. Fill in the form below to get started with GrowthLink’s
+            hassle-free tax filing services.<br><br>
+             Whether you're an individual, a small business, or a startup, we make sure
+            your filings are accurate, compliant, and on time. <br><br>
+
+            Your information helps us understand your needs better and offer personalized support. Once you submit the
+            form, our team will reach out within 24 hours to guide you through the next steps. <br><br>
+
+            We value your privacy — all details are 100% confidential and secure. <br><br>
+            Let’s take the stress out of tax season together.</p>
+            <ul class="list-disc ml-6 text-gray-800">
+                <li>🕒 Quick Process</li>
+                <li>🔒 Secure Submission</li>
+                <li>🎯 Expert Support</li>
+            </ul>
+       
+        </div>
+
+        <main class="flex-grow">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="bg-blue-100 shadow rounded-lg overflow-hidden">
+                    <div class="px-6 py-8">
+                        <h1 class="text-2xl font-semibold text-gray-900 mb-2">Client Information</h1>
+                        <p class="text-gray-600 mb-6">Please provide your details so we can follow up with you
+                            appropriately. Fields marked with an asterisk (*) are required.</p>
+                        <div class="mb-6">
+
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="progress-bar bg-primary rounded-full" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <form id="client-form" class="space-y-8">
+                            <!-- Personal Information Section -->
+                            <div>
+                                <h2 class="text-lg font-medium text-gray-900 mb-4">Personal Information</h2>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="first-name"
+                                            class="block text-sm font-medium text-gray-700 mb-1">First Name <span
+                                                class="text-red-500">*</span></label>
+                                        <input type="text" id="first-name" name="first-name"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none"
+                                            required>
+                                        <p class="error-message text-red-500 text-sm mt-1 hidden"></p>
+                                    </div>
+                                    <div>
+                                        <label for="last-name" class="block text-sm font-medium text-gray-700 mb-1">Last
+                                            Name <span class="text-red-500">*</span></label>
+                                        <input type="text" id="last-name" name="last-name"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none"
+                                            required>
+                                        <p class="error-message text-red-500 text-sm mt-1 hidden"></p>
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email
+                                            Address <span class="text-red-500">*</span></label>
+                                        <input type="email" id="email" name="email"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none"
+                                            required>
+                                        <p class="error-message text-red-500 text-sm mt-1 hidden"></p>
+                                    </div>
+                                    <div>
+                                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone
+                                            Number <span class="text-red-500">*</span></label>
+                                        <input type="tel" id="phone" name="phone"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none"
+                                            required>
+                                        <p class="error-message text-red-500 text-sm mt-1 hidden"></p>
+                                    </div>
+                                    <div class="md:col-span-2">
+                                        <label for="company"
+                                            class="block text-sm font-medium text-gray-700 mb-1">Company Name (if
+                                            applicable)</label>
+                                        <input type="text" id="company" name="company"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Address Section -->
+                            <div>
+                                <h2 class="text-lg font-medium text-gray-900 mb-4">Address</h2>
+                                <div class="grid grid-cols-1 gap-6">
+                                    <div>
+                                        <label for="street" class="block text-sm font-medium text-gray-700 mb-1">Street
+                                            Address <span class="text-red-500">*</span></label>
+                                        <input type="text" id="street" name="street"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none"
+                                            required>
+                                        <p class="error-message text-red-500 text-sm mt-1 hidden"></p>
+                                    </div>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div>
+                                            <label for="city" class="block text-sm font-medium text-gray-700 mb-1">City
+                                                <span class="text-red-500">*</span></label>
+                                            <input type="text" id="city" name="city"
+                                                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none"
+                                                required>
+                                            <p class="error-message text-red-500 text-sm mt-1 hidden"></p>
+                                        </div>
+                                        <div>
+                                            <label for="state"
+                                                class="block text-sm font-medium text-gray-700 mb-1">State/Province
+                                                <span class="text-red-500">*</span></label>
+                                            <input type="text" id="state" name="state"
+                                                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none"
+                                                required>
+                                            <p class="error-message text-red-500 text-sm mt-1 hidden"></p>
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div>
+                                            <label for="postal"
+                                                class="block text-sm font-medium text-gray-700 mb-1">Postal/ZIP Code
+                                                <span class="text-red-500">*</span></label>
+                                            <input type="text" id="postal" name="postal"
+                                                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none"
+                                                required>
+                                            <p class="error-message text-red-500 text-sm mt-1 hidden"></p>
+                                        </div>
+                                        <div>
+                                            <label for="country"
+                                                class="block text-sm font-medium text-gray-700 mb-1">Country <span
+                                                    class="text-red-500">*</span></label>
+                                            <div class="relative">
+                                                <select id="country" name="country"
+                                                    class="w-full px-4 py-2 border border-gray-300 rounded appearance-none focus:outline-none pr-8"
+                                                    required>
+                                                    <option value="">Select a country</option>
+                                                    <option value="US">United States</option>
+                                                    <option value="CA">Canada</option>
+                                                    <option value="UK">United Kingdom</option>
+                                                    <option value="AU">Australia</option>
+                                                    <option value="DE">Germany</option>
+                                                    <option value="FR">France</option>
+                                                    <option value="JP">Japan</option>
+                                                    <option value="CN">China</option>
+                                                    <option value="IN">India</option>
+                                                    <option value="BR">Brazil</option>
+                                                </select>
+                                                <div
+                                                    class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                                    <i class="ri-arrow-down-s-line text-gray-400"></i>
+                                                </div>
+                                            </div>
+                                            <p class="error-message text-red-500 text-sm mt-1 hidden"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Preferred Contact Section -->
+                            <div>
+                                <h2 class="text-lg font-medium text-gray-900 mb-4">Preferred Contact</h2>
+                                <div class="space-y-6">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-3">Preferred Contact
+                                            Method <span class="text-red-500">*</span></label>
+                                        <div class="space-y-3">
+                                            <label class="custom-radio block">Email
+                                                <input type="radio" name="contact-method" value="email" required>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="custom-radio block">Phone
+                                                <input type="radio" name="contact-method" value="phone">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="custom-radio block">Text Message
+                                                <input type="radio" name="contact-method" value="text">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <p class="error-message text-red-500 text-sm mt-1 hidden"></p>
+                                    </div>
+                                    <div>
+                                        <label for="best-time" class="block text-sm font-medium text-gray-700 mb-1">Best
+                                            Time to Contact <span class="text-red-500">*</span></label>
+                                        <div class="relative">
+                                            <select id="best-time" name="best-time"
+                                                class="w-full px-4 py-2 border border-gray-300 rounded appearance-none focus:outline-none pr-8"
+                                                required>
+                                                <option value="">Select a time</option>
+                                                <option value="morning">Morning (8AM - 12PM)</option>
+                                                <option value="afternoon">Afternoon (12PM - 5PM)</option>
+                                                <option value="evening">Evening (5PM - 8PM)</option>
+                                            </select>
+                                            <div
+                                                class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                                <i class="ri-arrow-down-s-line text-gray-400"></i>
+                                            </div>
+                                        </div>
+                                        <p class="error-message text-red-500 text-sm mt-1 hidden"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Privacy Policy -->
+                            <div>
+                                <label class="custom-checkbox block">
+                                    <input type="checkbox" name="privacy-policy" required>
+                                    <span class="checkbox-mark"></span>
+                                    <span class="text-sm text-gray-700">I agree to the <a href="#"
+                                            class="text-primary hover:underline">Privacy Policy</a> and consent to being
+                                        contacted about my inquiry. <span class="text-red-500">*</span></span>
+                                </label>
+                                <p class="error-message text-red-500 text-sm mt-1 hidden"></p>
+                            </div>
+                            <!-- Form Actions -->
+                            <div class="flex flex-col sm:flex-row sm:justify-between gap-4">
+                                <button type="button" id="reset-button"
+                                    class="px-6 py-2 border border-gray-300 rounded-button text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 whitespace-nowrap">Reset
+                                    Form</button>
+                                <button type="submit" id="submit-button"
+                                    class="px-6 py-2 bg-primary text-white rounded-button hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary whitespace-nowrap flex items-center justify-center">
+                                    <span>Submit Information</span>
+                                    <div class="loader ml-2"></div>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-white border-t border-gray-200">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <a href="./../index.html" class="mb-6 block"><img
+                                src="./../assets/home img/form footerlogo900x90.png" alt="GrowthLink Tax Filings"
+                                class="h-16 w-auto brightness-200" /></a>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/1FYVUXbvx6/?mibextid=wwXIfr" target="_blank"
+                            rel="noopener noreferrer" aria-label="Share on Facebook"
+                            class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full hover:...">
+                            <i class="ri-facebook-fill ri-lg"></i>
+                        </a>
+
+                        <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit our Twitter page"
+                            class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full hover:...">
+
+                            <i class="ri-twitter-fill ri-lg"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/company/growthlinktaxfilings/" target="_blank"
+                            rel="noopener noreferrer" aria-label="Visit our LinkedIn page"
+                            class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full hover:...">
+                            <i class="ri-linkedin-fill ri-lg"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/growthlinktaxfilings?igsh=MW05ZjVxNDN0OWN5ZA%3D%3D&utm_source=qr"
+                            target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page"
+                            class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full hover:...">
+                            <i class="ri-instagram-fill ri-lg"></i>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="mt-4 text-center text-sm text-gray-500">
+                    <p>© 2025 All rights reserved. <a href="./../privacy policy/privacypolicy.html"
+                            class="text-primary hover:underline">Privacy Policy</a> |
+                        <a href="./../terms&services/terms.html" class="text-primary hover:underline">Terms of
+                            Service</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('client-form');
+            const resetButton = document.getElementById('reset-button');
+            const submitButton = document.getElementById('submit-button');
+            const loader = document.querySelector('.loader');
+            const progressBar = document.querySelector('.progress-bar');
+            const progressPercentage = document.getElementById('progress-percentage');
+            const requiredFields = form.querySelectorAll('[required]');
+            // Function to update progress bar
+            function updateProgress() {
+                let filledFields = 0;
+                requiredFields.forEach(field => {
+                    if (field.type === 'radio') {
+                        if (document.querySelector([name = "${field.name}"]: checked)) {
+                            filledFields++;
+                        }
+                    } else if (field.type === 'checkbox') {
+                        if (field.checked) {
+                            filledFields++;
+                        }
+                    } else {
+                        if (field.value.trim() !== '') {
+                            filledFields++;
+                        }
+                    }
+                });
+                const totalFields = requiredFields.length;
+                const uniqueRadioGroups = new Set();
+                requiredFields.forEach(field => {
+                    if (field.type === 'radio') {
+                        uniqueRadioGroups.add(field.name);
+                    }
+                });
+                const radioGroupCount = uniqueRadioGroups.size;
+                const adjustedTotal = totalFields - requiredFields.length + radioGroupCount;
+                const progress = Math.round((filledFields / adjustedTotal) * 100);
+                progressBar.style.width = $ { progress } %;
+                progressPercentage.textContent = $ { progress } %;
+            }
+            // Add input event listeners to all fields
+            form.querySelectorAll('input, select').forEach(field => {
+                field.addEventListener('input', updateProgress);
+                field.addEventListener('change', updateProgress);
+            });
+            // Form validation
+            function validateField(field) {
+                const errorElement = field.nextElementSibling;
+                if (!errorElement || !errorElement.classList.contains('error-message')) return true;
+                let isValid = true;
+                let errorMessage = '';
+                if (field.validity.valueMissing) {
+                    isValid = false;
+                    errorMessage = 'This field is required';
+                } else if (field.validity.typeMismatch) {
+                    isValid = false;
+                    if (field.type === 'email') {
+                        errorMessage = 'Please enter a valid email address';
+                    } else {
+                        errorMessage = 'Please enter a valid value';
+                    }
+                } else if (field.id === 'phone' && field.value.trim() !== '') {
+                    const phoneRegex = /^\+?[0-9\s\-()]{7,20}$/;
+                    if (!phoneRegex.test(field.value)) {
+                        isValid = false;
+                        errorMessage = 'Please enter a valid phone number';
+                    }
+                } else if (field.id === 'postal' && field.value.trim() !== '') {
+                    const postalRegex = /^[0-9a-zA-Z\s\-]{3,10}$/;
+                    if (!postalRegex.test(field.value)) {
+                        isValid = false;
+                        errorMessage = 'Please enter a valid postal/ZIP code';
+                    }
+                }
+                if (!isValid) {
+                    errorElement.textContent = errorMessage;
+                    errorElement.classList.remove('hidden');
+                    field.classList.add('border-red-500');
+                } else {
+                    errorElement.classList.add('hidden');
+                    field.classList.remove('border-red-500');
+                }
+                return isValid;
+            }
+            // Validate radio button groups
+            function validateRadioGroup(name) {
+                const radioButtons = form.querySelectorAll([name = "${name}"]);
+                const errorElement = radioButtons[radioButtons.length - 1].closest('div').querySelector('.error-message');
+                let isChecked = false;
+                radioButtons.forEach(radio => {
+                    if (radio.checked) {
+                        isChecked = true;
+                    }
+                });
+                if (!isChecked) {
+                    errorElement.textContent = 'Please select an option';
+                    errorElement.classList.remove('hidden');
+                    return false;
+                } else {
+                    errorElement.classList.add('hidden');
+                    return true;
+                }
+            }
+            // Validate checkbox
+            function validateCheckbox(checkbox) {
+                const errorElement = checkbox.closest('div').querySelector('.error-message');
+                if (!checkbox.checked) {
+                    errorElement.textContent = 'You must agree to continue';
+                    errorElement.classList.remove('hidden');
+                    return false;
+                } else {
+                    errorElement.classList.add('hidden');
+                    return true;
+                }
+            }
+            // Add blur event listeners for real-time validation
+            form.querySelectorAll('input:not([type="radio"]):not([type="checkbox"]), select').forEach(field => {
+                field.addEventListener('blur', () => {
+                    validateField(field);
+                });
+            });
+            // Reset form
+            resetButton.addEventListener('click', () => {
+                form.reset();
+                form.querySelectorAll('.error-message').forEach(error => {
+                    error.classList.add('hidden');
+                });
+                form.querySelectorAll('input, select').forEach(field => {
+                    field.classList.remove('border-red-500');
+                });
+                updateProgress();
+            });
+            // Form submission
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                let isFormValid = true;
+                // Validate all fields
+                form.querySelectorAll('input:not([type="radio"]):not([type="checkbox"]), select').forEach(field => {
+                    if (!validateField(field)) {
+                        isFormValid = false;
+                    }
+                });
+                // Validate radio groups
+                if (!validateRadioGroup('contact-method')) {
+                    isFormValid = false;
+                }
+                // Validate checkbox
+                if (!validateCheckbox(form.querySelector('[name="privacy-policy"]'))) {
+                    isFormValid = false;
+                }
+                if (isFormValid) {
+                    // Show loading indicator
+                    submitButton.querySelector('span').textContent = 'Submitting...';
+                    loader.style.display = 'block';
+                    submitButton.disabled = true;
+                    // Simulate form submission
+                    setTimeout(() => {
+                        // Hide loading indicator
+                        submitButton.querySelector('span').textContent = 'Submit Information';
+                        loader.style.display = 'none';
+                        submitButton.disabled = false;
+                        // Show success message
+                        alert('Form submitted successfully! We will contact you soon.');
+                        form.reset();
+                        updateProgress();
+                    }, 1500);
+                } else {
+                    // Scroll to the first error
+                    const firstError = form.querySelector('.error-message:not(.hidden)');
+                    if (firstError) {
+                        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            });
+            // Initialize progress
+            updateProgress();
+            // Autofill suggestions for address
+            const addressFields = {
+                'street': document.getElementById('street'),
+                'city': document.getElementById('city'),
+                'state': document.getElementById('state'),
+                'postal': document.getElementById('postal'),
+                'country': document.getElementById('country')
+            };
+            // Sample addresses for autofill demonstration
+            const sampleAddresses = [
+                {
+                    street: '123 Main Street',
+                    city: 'New York',
+                    state: 'NY',
+                    postal: '10001',
+                    country: 'US'
+                },
+                {
+                    street: '456 Park Avenue',
+                    city: 'Los Angeles',
+                    state: 'CA',
+                    postal: '90001',
+                    country: 'US'
+                },
+                {
+                    street: '789 Oxford Street',
+                    city: 'London',
+                    state: 'England',
+                    postal: 'W1D 1BS',
+                    country: 'UK'
+                }
+            ];
+            // Simulate address autofill when street field is filled
+            addressFields.street.addEventListener('input', function () {
+                const input = this.value.toLowerCase();
+                if (input.length > 3) {
+                    for (const address of sampleAddresses) {
+                        if (address.street.toLowerCase().includes(input)) {
+                            // Wait a bit to simulate API call
+                            setTimeout(() => {
+                                if (confirm('Would you like to autofill with this address?\n' + address.street + ', ' + address.city + ', ' + address.state)) {
+                                    addressFields.street.value = address.street;
+                                    addressFields.city.value = address.city;
+                                    addressFields.state.value = address.state;
+                                    addressFields.postal.value = address.postal;
+                                    addressFields.country.value = address.country;
+                                    updateProgress();
+                                }
+                            }, 500);
+                            break;
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

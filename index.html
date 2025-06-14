@@ -61,26 +61,148 @@
 
     <header class="w-full bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-            <div class="flex items-center">
+            <div class="flex items-center space-x-2">
                 <!-- Logo -->
                 <a href="./index.html" class="mr-6">
-                    <img src="./assets/home img/header logo 150x80.png" alt="GrowthLink Tax Filings" class="h-16 w-auto md:h-20">
+                    <img src="./assets/home img/header logo 150x80.png" alt="GrowthLink Tax Filings"
+                        class="h-16 w-auto md:h-20">
                 </a>
 
                 <!-- Desktop Navigation -->
-                <nav class="hidden md:flex space-x-6">
-                    <a href="./Main services/taxservices/services/Vview plans.html"
-                        class="text-gray-800 hover:text-primary font-medium">Income Tax Services</a>
-                    <a href="./Main services/gst services/services/gst .html"
-                        class="text-gray-800 hover:text-primary font-medium">GST Services</a>
-                    <a href="./Main services/Business registration/services/business.html"
-                        class="text-gray-800 hover:text-primary font-medium">Business Registrations</a>
-                    <a href="./Main services/Licences/services/licences.html"
-                        class="text-gray-800 hover:text-primary font-medium">Licenses</a>
-                    <a href="./Main services/compliance/services/compliance.html"
-                        class="text-gray-800 hover:text-primary font-medium">Compliances</a>
+                <nav class="hidden md:flex items-center space-x-2  text-gray-800 relative">
+
+                    <div class="relative group">
+                        <!-- Button -->
+                        <button class="text-gray-800 hover:text-primary font-medium px-2 py-2">
+                            Income Tax Services
+                        </button>
+
+                        <!-- Dropdown -->
+                        <div
+                            class="absolute top-full left-0 mt-1 w-64 bg-white border rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-200 z-50">
+                            <a href="./Main services/taxservices/services/Vview plans.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Individual
+                                Tax Filing</a>
+                            <a href="./Main services/taxservices/services/Vview plans.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Business
+                                Tax Filing</a>
+                            <a href="./Main services/taxservices/services/Vview plans.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Income
+                                Tax Specialized Services</a>
+                            <a href="./Main services/taxservices/services/Vview plans.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Advance
+                                Tax</a>
+                            <a href="./Main services/taxservices/services/Vview plans.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">TDS
+                                Returns</a>
+                            <a href="./Main services/taxservices/services/Vview plans.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Income
+                                Tax Advisory Services</a>
+                        </div>
+                    </div>
+
+                    <div class="relative group">
+                        <!-- Button -->
+                        <button class="text-gray-800 hover:text-primary font-medium px-2 py-2">
+                           GST Services
+                        </button>
+
+                        <!-- Dropdown -->
+                        <div
+                            class="absolute top-full left-0 mt-1 w-64 bg-white border rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-200 z-50">
+                            <a href="./Main services/gst services/services/gst .html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">GST Registration</a>
+                            <a href="./Main services/gst services/services/gst .html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">GST Return Filing</a>
+                            <a href="./Main services/gst services/services/gst .html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">GST Reconciliation</a>
+                            <a href="./Main services/gst services/services/gst .html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">GST Compliance</a>
+                            <a href="./Main services/gst services/services/gst .html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">GST Refund Processing</a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="relative group">
+                        <!-- Button -->
+                        <button class="text-gray-800 hover:text-primary font-medium px-2 py-2">
+                       Business Registrations
+                        </button>
+
+                        <!-- Dropdown -->
+                        <div
+                            class="absolute top-full left-0 mt-1 w-64 bg-white border rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-200 z-50">
+                            <a href="./Main services/Business registration/services/business.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">MSME Registration</a>
+                            <a href="./Main services/Business registration/services/business.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Sole Proprietor ship</a>
+                            <a href="./Main services/Business registration/services/business.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Partnership Firm</a>
+                            <a href="./Main services/Business registration/services/business.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">One Person Company</a>
+                            <a href="./Main services/Business registration/services/business.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Limited Liability Partnership</a>
+                            <a href="./Main services/Business registration/services/business.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Private Limited Company</a>
+                            <a href="./Main services/Business registration/services/business.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Public Limited Company</a>
+                            <a href="./Main services/Business registration/services/business.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Startup india Registration</a>
+                        </div>
+                    </div>
+                    
+                   <div class="relative group">
+                        <!-- Button -->
+                        <button class="text-gray-800 hover:text-primary font-medium px-2 py-2">
+                        Licenses
+                        </button>
+
+                        <!-- Dropdown -->
+                        <div
+                            class="absolute top-full left-0 mt-1 w-64 bg-white border rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-200 z-50">
+                            <a href="./Main services/Licences/services/licences.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Food License (FSSAI)</a>
+                            <a href="./Main services/Licences/services/licences.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Trade License</a>
+                            <a href="./Main services/Licences/services/licences.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Shop & Establishment</a>
+                            <a href="./Main services/Licences/services/licences.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Factory License</a>
+                            <a href="./Main services/Licences/services/licences.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Import/Export License</a>
+                            
+                        </div>
+                    </div>
+
+                     <div class="relative group">
+                        <!-- Button -->
+                        <button class="text-gray-800 hover:text-primary font-medium px-2 py-2">
+                        Compliances
+                        </button>
+
+                        <!-- Dropdown -->
+                        <div
+                            class="absolute top-full left-0 mt-1 w-64 bg-white border rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-200 z-50">
+                            <a href="./Main services/compliance/services/compliance.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Annual Compliance</a>
+                            <a href="./Main services/compliance/services/compliance.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Tax Compliance</a>
+                            <a href="./Main services/compliance/services/compliance.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Regulatory Compliance</a>
+                            <a href="./Main services/compliance/services/compliance.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Compliance Calendar</a>
+                            <a href="./Main services/compliance/services/compliance.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Compliance Audit</a>
+                             <a href="./Main services/compliance/services/compliance.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">Director/Partner Compliance</a>    
+                            
+                        </div>
+                    </div>
+
+                    
                     <a href="./Main services/contact/services/contact.html"
-                        class="text-gray-800 hover:text-primary font-medium">Contact</a>
+                        class="text-gray-800 hover:text-primary font-medium px-2 py-2">Contact</a>
                 </nav>
             </div>
 
@@ -90,7 +212,7 @@
                 <div class="hidden md:flex items-center space-x-3 text-sm text-gray-700">
                     <div class="flex items-center space-x-1">
                         <i class="ri-phone-line text-primary"></i>
-                        <span>+91 9936093609</span>
+                        <span>+91&nbsp;99&nbsp;3609&nbsp;3609</span>
                     </div>
                     <div class="flex items-center space-x-1">
                         <i class="ri-mail-line text-primary"></i>
@@ -122,7 +244,7 @@
                 class="block text-gray-800 hover:text-primary font-medium">Contact</a>
             <div class="flex items-center space-x-2 mt-2 text-sm text-gray-700">
                 <i class="ri-phone-line text-primary"></i>
-                <span>+91 9936093609</span>
+                <span>+91&nbsp;99&nbsp;3609&nbsp;3609</span>
             </div>
             <div class="flex items-center space-x-2 text-sm text-gray-700">
                 <i class="ri-mail-line text-primary"></i>
@@ -178,7 +300,7 @@
 
             <!-- Image -->
             <div class="flex justify-center">
-                <img src="./assets/home img/header image.png" alt="Startup teamwork illustration"
+                <img src="./assets/home img/header-img.jpg" alt="Startup teamwork illustration"
                     class="rounded-2xl shadow-xl w-full max-w-md md:max-w-lg object-cover" />
             </div>
         </div>
@@ -191,20 +313,21 @@
             <!-- Left: Logo Image -->
             <div>
                 <h4 class="text-4xl font-bold uppercase tracking-wide mb-12">About Us</h4>
-                
-                <p class="text-2xl font-bold text-yellow-300">10 + Years Experiance</p>
-                <span class="flex items-center text-yellow-300 text-2xl font-bold  w-full max-w-md mx-auto">&</span>
-                <p class="text-2xl font-bold text-yellow-300">Team Of Chartered Accountants</p> <br>
+
+                <p class="text-2xl font-bold text-yellow-300 py-2">✅ 10 + Years Experiance.</p>
+
+                <p class="text-2xl font-bold text-yellow-300 py-2">✅ Team Of Chartered Accountants.</p> <br>
                 <p class="text-white mb-8">
-                    GrowthLink Tax Filings is your trusted partner in navigating the complexities of tax compliance,
-                    financial reporting, and regulatory filings.
-                    Our mission is to simplify taxation for individuals, startups, and businesses by providing
-                    expert-led, accurate, and timely tax solutions. With a dedicated team of professionals and a
-                    customer-first approach,
+                    GrowthLink Tax Filings is your trusted partner in navigating the complexities of
+                    tax compliance,financial reporting, and regulatory filings.
+                    Our mission is to simplify taxation for individuals, startups, and businesses by
+                    providing expert-led, accurate, and timely tax solutions. With a dedicated team of
+                    professionals and a customer-first approach,
                     we are committed to ensuring you meet all your tax obligations without stress. <br> <br>
-                    At GrowthLink, we understand that every client has unique needs. That’s why we offer a full suite of
-                    services, including Income Tax Filing, GST Return Filing, TDS Compliance, Business Registration,
-                    MSME & Startup India Registration, and more. Whether you're a salaried individual, a freelancer, or
+                    At GrowthLink, we understand that every client has unique needs. That’s why we offer a
+                    full suite of services, including Income Tax Filing, GST Return Filing, TDS Compliance,
+                    Business Registration, MSME & Startup India Registration, and more.
+                    Whether you're a salaried individual, a freelancer, or
                     a growing enterprise, our platform is designed to handle it all with precision and care. <br>
                     <br>
                     Choose GrowthLink Tax Filings for peace of mind, professional service,
@@ -216,7 +339,7 @@
             <!-- Right: Text Content -->
 
             <div class="flex justify-center">
-                <img src="./assets/home img/about-us-01.jpg" alt="Startup teamwork illustration"
+                <img src="./assets/home img/head-img-02.jpg" alt="Startup teamwork illustration"
                     class="rounded-2xl shadow-xl w-full h-81 max-w-md md:max-w-lg object-cover" />
             </div>
 
@@ -912,7 +1035,8 @@
                         <img src="./assets/home img/footer-iogo-150x80.png" alt="GrowthLink Tax Filings"
                             class="h-20 w-auto">
                     </a>
-                    <p class="text-gray-400 mb-6">Simplifying tax filing for individuals and businesses across India
+                    <p class="text-gray-400 mb-6">Simplified tax filing solutions for individuals and businesses across
+                        India
                         since 2017.</p>
                     <div class="flex space-x-4">
                         <a href="https://www.facebook.com/share/1FYVUXbvx6/?mibextid=wwXIfr" target="_blank"

@@ -206,7 +206,7 @@
                                             </div>
                                             <input type="number"
                                                 class="w-full pl-8 pr-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none"
-                                                placeholder="0.00" />
+                                                placeholder="0.00"  id="salary"/>
                                         </div>
                                     </div>
                                     <div>
@@ -217,7 +217,7 @@
                                                 class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                                 <span class="text-gray-500">₹</span>
                                             </div>
-                                            <input type="number"
+                                            <input type="number" id="rental"
                                                 class="w-full pl-8 pr-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none"
                                                 placeholder="0.00" />
                                         </div>
@@ -229,7 +229,7 @@
                                                 class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                                 <span class="text-gray-500">₹</span>
                                             </div>
-                                            <input type="number"
+                                            <input type="number" id="other"
                                                 class="w-full pl-8 pr-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none"
                                                 placeholder="0.00" />
                                         </div>
@@ -249,7 +249,7 @@
                                                 class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                                 <span class="text-gray-500">₹</span>
                                             </div>
-                                            <input type="number"
+                                            <input type="number" id="sec80c"
                                                 class="w-full pl-8 pr-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none"
                                                 placeholder="0.00" />
                                         </div>
@@ -262,7 +262,7 @@
                                                 class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                                 <span class="text-gray-500">₹</span>
                                             </div>
-                                            <input type="number"
+                                            <input type="number" id="sec80d"
                                                 class="w-full pl-8 pr-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none"
                                                 placeholder="0.00" />
                                         </div>
@@ -275,7 +275,7 @@
                                                 class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                                 <span class="text-gray-500">₹</span>
                                             </div>
-                                            <input type="number"
+                                            <input type="number" id="hra"
                                                 class="w-full pl-8 pr-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none"
                                                 placeholder="0.00" />
                                         </div>
@@ -288,22 +288,27 @@
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div class="bg-white p-4 rounded shadow-sm">
                                 <p class="text-sm text-gray-600 mb-1">Total Income</p>
-                                <p class="text-2xl font-bold text-gray-900">₹12,00,000</p>
+                                <p id="total-income" class="text-2xl font-bold text-gray-900">₹12,00,000</p>
                             </div>
                             <div class="bg-white p-4 rounded shadow-sm">
                                 <p class="text-sm text-gray-600 mb-1">Total Deductions</p>
-                                <p class="text-2xl font-bold text-gray-900">₹1,75,000</p>
+                                <p id="total-deductions" class="text-2xl font-bold text-gray-900">₹1,75,000</p>
                             </div>
                             <div class="bg-primary bg-opacity-10 p-4 rounded shadow-sm">
                                 <p class="text-sm text-primary mb-1">Tax Payable</p>
-                                <p class="text-2xl font-bold text-primary">₹1,07,250</p>
+                                <p id="tax-payable" class="text-2xl font-bold text-primary">₹1,07,250</p>
                             </div>
                         </div>
                         <div class="flex justify-center mt-6">
                             <button
                                 class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-blue-600 transition mr-4 whitespace-nowrap"
-                                onclick="calculateTax()">
-                                Recalculate
+                                onclick="calculateTAX()">
+                                Calculate
+                            </button>
+                            <button
+                                class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-blue-600 transition mr-4 whitespace-nowrap"
+                                onclick="reCalculate()">
+                                Realculate
                             </button>
                             <a href="./../../getstart button/index.html" data-readdy="true"
                                 class="bg-white text-primary border border-primary px-6 py-3 !rounded-button font-medium hover:bg-gray-50 transition whitespace-nowrap inline-block">Start
@@ -519,36 +524,8 @@
     </div>
 
 
+<script src="./script.js"></script>
 
-    <script>
-        function calculateTax() {
-            const salary = parseFloat(document.getElementById('salary').value) || 0;
-            const rental = parseFloat(document.getElementById('rental').value) || 0;
-            const other = parseFloat(document.getElementById('other').value) || 0;
-            const sec80c = Math.min(parseFloat(document.getElementById('sec80c').value) || 0, 150000);
-            const sec80d = Math.min(parseFloat(document.getElementById('sec80d').value) || 0, 25000);
-            const hra = parseFloat(document.getElementById('hra').value) || 0;
-
-            const totalIncome = salary + rental + other;
-            const totalDeductions = sec80c + sec80d + hra;
-            const taxableIncome = Math.max(0, totalIncome - totalDeductions);
-
-            let tax = 0;
-            if (taxableIncome <= 250000) {
-                tax = 0;
-            } else if (taxableIncome <= 500000) {
-                tax = (taxableIncome - 250000) * 0.05;
-            } else if (taxableIncome <= 1000000) {
-                tax = 12500 + (taxableIncome - 500000) * 0.2;
-            } else {
-                tax = 112500 + (taxableIncome - 1000000) * 0.3;
-            }
-
-            document.getElementById('total-income').innerText = '₹' + totalIncome.toLocaleString('en-IN');
-            document.getElementById('total-deductions').innerText = '₹' + totalDeductions.toLocaleString('en-IN');
-            document.getElementById('tax-payable').innerText = '₹' + tax.toLocaleString('en-IN');
-        }
-    </script>
 
 </body>
 

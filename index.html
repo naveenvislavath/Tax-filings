@@ -34,12 +34,12 @@
         };
     </script>
 
-   <!-- Google tag (gtag.js) event -->
-<script>
-  gtag('event', 'ads_conversion_Contact_Us_1', {
-    // <event_parameters>
-  });
-</script>
+    <!-- Google tag (gtag.js) event -->
+    <script>
+        gtag('event', 'ads_conversion_Contact_Us_1', {
+            // <event_parameters>
+        });
+    </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
@@ -484,7 +484,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-8 gap-4 mb-12">
                 <!-- Card 12 -->
                 <div class="bg-gray-300 p-6 rounded-2xl shadow hover:shadow-md transition">
-                    <img src="./assets/services img/b-01.png" alt="Data Security" class="h-12 mx-auto mb-4">
+                    <img src="./assets/services img/b-01.png" alt="Data Security" class="h-12 w-12 mx-auto mb-4">
                     <a href="./Main services/Business registration/services/business.html"
                         class="text-lg font-semibold text-gray-800">MSME Registration</a>
 
@@ -1019,7 +1019,7 @@
                                     <button type="button" id="reset-button"
                                         class="px-6 py-2 border border-gray-300 rounded-button text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 whitespace-nowrap">Reset
                                         Form</button>
-                                    <button  id="submit-button" onclick="formData()"
+                                    <button id="submit-button" onclick="formData()"
                                         class="px-6 py-2 bg-primary text-white rounded-button hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary whitespace-nowrap flex items-center justify-center">
                                         <span>Submit Information</span>
                                         <div class="loader ml-2"></div>
@@ -1035,7 +1035,7 @@
 
 
     </section>
-    
+
 
     <!--footer-->
     <footer class="bg-gray-900 text-white pt-16 pb-8">
@@ -1211,19 +1211,21 @@
             </div>
         </div>
     </footer>
-<script>
-    function formData() {
-        event.preventDefault(); // Stop the default form submission
+    <script>
+        function formData() {
+            event.preventDefault(); // Stop the default form submission
 
-        const form = document.getElementById('client-form');
-        const formData = new FormData(form);
+            const form = document.getElementById('client-form');
+            const formData = new FormData(form);
 
-        const data = {};
-        formData.forEach((value, key) => {
-            data[key] = value;
-        });
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
 
-        console.log("Submitted Form Data:", data);
-    }
-</script>
+            console.log("Submitted Form Data:", data);
+        }
+    </script>
 </body>
+
+</html>
